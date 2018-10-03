@@ -1,9 +1,13 @@
+import math
+
 boatSize = input("What size boat are you renting? Say L, M, or S ")
 speed = int(input("How fast are you traveling? "))
 
 if boatSize == str("L"):
     beginningSize = 10000000
     rental = 1400
+    fuelCost = (1.84575*math.log(beginningSize)-4.03333)
+    print(fuelCost)
 if boatSize == str("M"):
     beginningSize = 100000
     rental = 780
@@ -19,6 +23,5 @@ days = 9600/(speed*24)
 radius = ((beginningSize*3)/(4*3.14159265))**(1/3)
 #print(radius)
 
-for i in range(days):
-    
+
     
