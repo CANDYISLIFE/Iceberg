@@ -6,14 +6,18 @@ speed = int(input("How fast are you traveling? "))
 if boatSize == str("L"):
     beginningSize = 10000000
     rental = 1400
-    fuelCost = (1.84575*math.log(beginningSize)-4.03333)
+    fuelCost = (2.01947*math.log(beginningSize)-6.86667)
     print(fuelCost)
 if boatSize == str("M"):
     beginningSize = 100000
     rental = 780
+    fuelCost = (1.69375*math.log(beginningSize)-5.8)
+    print(fuelCost)
 if boatSize == str("S"):
     beginningSize = 500000
     rental = 520
+    fuelCost = (1.36803*math.log(beginningSize)-4.86667)
+    print(fuelCost)
 else:
     print("Please enter either a L, M, or S ")
 
