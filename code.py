@@ -10,7 +10,7 @@ if boatSize == str("L"):
     #fuelCost = (2.01947*math.log(beginningSize)-6.86667)
     #print(fuelCost)
 if boatSize == str("M"):
-    beginningSize = 100000
+    beginningSize = 1000000
     rental = 780
     #fuelCost = (1.69375*math.log(beginningSize)-5.8)
     #print(fuelCost)
@@ -19,7 +19,7 @@ if boatSize == str("S"):
     rental = 520
     #fuelCost = (1.36803*math.log(beginningSize)-4.86667)
     #print(fuelCost)
-else:
+#else:
     print("Please enter either a L, M, or S ")
 
 if speed == 5:
@@ -28,8 +28,8 @@ if speed == 5:
 if speed == 3: 
     fuelCost = (1.52003*math.log(beginningSize)-3.46667)
     print(fuelCost)
-if speed == 1.19431: 
-    fuelCost = (1.52003*math.log(beginningSize)-2.83333)
+if speed == 1: 
+    fuelCost = (1.19431*math.log(beginningSize)-2.83333)
     print(fuelCost)
 
 days = 9600/(speed*24)
