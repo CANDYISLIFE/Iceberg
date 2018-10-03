@@ -45,20 +45,22 @@ beginningSize = radius
 for i in range(int(days)):
     if speed == 5:
         fuelCost = (1.84575*math.log(beginningSize)-4.0333)
-        shrink = .0001(beginningSize) 
+        shrink = .0001*((beginningSize)) 
         #print(fuelCost)
     if speed == 3: 
         fuelCost = (1.52003*math.log(beginningSize)-3.46667)
-        shrink = .00008(beginningSize)
+        print(beginningSize)
+        shrink = .00008*((beginningSize))
+        print(shrink)
         #print(fuelCost)
     if speed == 1: 
         fuelCost = (1.19431*math.log(beginningSize)-2.83333)
-        shrink = .00006(beginningSize)
+        shrink = .00006*((beginningSize))
         #print(fuelCost)
     distance += (speed*24)
     beginningSize += -shrink
     print(beginningSize)
-        
+print(days)
         
         
         
