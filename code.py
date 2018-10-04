@@ -71,7 +71,7 @@ for i in range(int(days)):
     beginningSize = (4/3)*(3.14159265*((radius)**3))
     #print(radius)
     fuelTotal += fuelCost
-    print(fuelCost)
+    #print(fuelCost)
     boatCost += rental
     
 totalCost = boatCost + fuelTotal
