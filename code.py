@@ -50,27 +50,28 @@ radius = ((beginningSize*3)/(4*3.14159265))**(1/3)
 
 for i in range(int(days)):
     if speed == 5:
-        fuelCost = (1.84575*math.log(beginningSize)-4.0333)
+        fuelCost = (1.84575*math.log(beginningSize)-4.0333)*24
         shrink = .0001*(distance) 
         #print(fuelCost)
     if speed == 3: 
-        fuelCost = (1.52003*math.log(beginningSize)-3.46667)
+        fuelCost = (1.52003*math.log(beginningSize)-3.46667)*24
         #print(beginningSize)
         shrink = .00008*(distance)
         #print(shrink)
         #print(fuelCost)
     if speed == 1: 
-        fuelCost = (1.19431*math.log(beginningSize)-2.83333)
+        fuelCost = (1.19431*math.log(beginningSize)-2.83333)*24
         shrink = .00006*(distance)
         #print(fuelCost)
     distance += (speed*24)
     if distance >= 4000:
         distance = 4000
-    print(distance)
+    #print(distance)
     radius += -shrink
     beginningSize = (4/3)*(3.14159265*((radius)**3))
     #print(radius)
     fuelTotal += fuelCost
+    print(fuelCost)
     boatCost += rental
     
 totalCost = boatCost + fuelTotal
@@ -78,6 +79,7 @@ water = beginningSize
 #print(water)
 
 print(fuelTotal)
+print(totalCost)
 waterCost = (totalCost)/(.85*water)
 print(waterCost)
 print(days)
