@@ -3,6 +3,10 @@ import math
 boatSize = input("What size boat are you renting? Say L, M, or S ")
 speed = int(input("How fast are you traveling? Enter 1, 3, or 5 "))
 distance = 0
+fuelTotal = 0
+boatCost = 0
+totalCost = 0
+water = 0
 
 if boatSize == str("L"):
     beginningSize = 10000000
@@ -50,9 +54,9 @@ for i in range(int(days)):
         #print(fuelCost)
     if speed == 3: 
         fuelCost = (1.52003*math.log(beginningSize)-3.46667)
-        print(beginningSize)
+        #print(beginningSize)
         shrink = .00008*(distance)
-        print(shrink)
+        #print(shrink)
         #print(fuelCost)
     if speed == 1: 
         fuelCost = (1.19431*math.log(beginningSize)-2.83333)
@@ -60,7 +64,17 @@ for i in range(int(days)):
         #print(fuelCost)
     distance += (speed*24)
     radius += -shrink
-    print(radius)
+    beginningSize = (4/3)*(3.14159265*((radius)**3))
+    #print(radius)
+    fuelTotal += fuelCost
+    boatCost += rental
+    
+totalCost = boatCost + fuelTotal
+water = beginningSize
+#print(water)
+
+waterCost = (totalCost)/(.85*water)
+print(waterCost)
 print(days)
         
         
