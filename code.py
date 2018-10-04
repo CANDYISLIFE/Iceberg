@@ -24,7 +24,7 @@ if boatSize == str("S"):
     rental = 520
     #fuelCost = (1.36803*math.log(beginningSize)-4.86667)
     #print(fuelCost)
-#else:
+else:
     print("Please enter either a L, M, or S ")
 
 """
@@ -64,6 +64,9 @@ for i in range(int(days)):
         shrink = .00006*(distance)
         #print(fuelCost)
     distance += (speed*24)
+    if distance >= 4000:
+        distance = 4000
+    print(distance)
     radius += -shrink
     beginningSize = (4/3)*(3.14159265*((radius)**3))
     #print(radius)
@@ -74,6 +77,7 @@ totalCost = boatCost + fuelTotal
 water = beginningSize
 #print(water)
 
+print(fuelTotal)
 waterCost = (totalCost)/(.85*water)
 print(waterCost)
 print(days)
