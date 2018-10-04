@@ -39,31 +39,32 @@ days = 9600/(speed*24)
 
 radius = ((beginningSize*3)/(4*3.14159265))**(1/3)
 #print(radius)
-beginningSize = radius
+
+
 #print(beginningSize)
 
 for i in range(int(days)):
     if speed == 5:
         fuelCost = (1.84575*math.log(beginningSize)-4.0333)
-        shrink = .0001*((beginningSize)) 
+        shrink = .0001*(distance) 
         #print(fuelCost)
     if speed == 3: 
         fuelCost = (1.52003*math.log(beginningSize)-3.46667)
         print(beginningSize)
-        shrink = .00008*((beginningSize))
+        shrink = .00008*(distance)
         print(shrink)
         #print(fuelCost)
     if speed == 1: 
         fuelCost = (1.19431*math.log(beginningSize)-2.83333)
-        shrink = .00006*((beginningSize))
+        shrink = .00006*(distance)
         #print(fuelCost)
     distance += (speed*24)
-    beginningSize += -shrink
-    print(beginningSize)
+    radius += -shrink
+    print(radius)
 print(days)
         
         
-        
+
         
         
         
