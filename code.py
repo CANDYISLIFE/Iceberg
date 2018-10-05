@@ -76,7 +76,8 @@ for i in range(int(days)):
     
 totalCost = boatCost + fuelTotal
 water = beginningSize
-#print(water)
+print(water)
+
 
 print(fuelTotal)
 print(totalCost)
